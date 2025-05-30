@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    body{
+
+      margin: 0;
+
+
+    }
+
+    .header{
+
+      background-color: rgb(22, 160, 133,0.9);
+      background-color: rgb(rgb(255, 255, 255), green, blue);
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      overflow: hidden;
+      position: fixed;
+
+      ul{
+
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 40px;
+        height: 100%;
+        margin-top: 0;
+
+        li{
+          height: 100%;
+          display: flex;
+          text-align: center;
+        }
+
+        a{
+          margin: 0;
+          color: white;
+          text-decoration: none;
+          margin-top: 15px;
+          width: 80px;
+        }
+      }
+    }
+
+
+
+
+    .header li:hover{
+
+      background-color:rgba(85, 154, 131, 0.5);
+
+
+
+
+    }
+
+
+
+    .title{
+
+      background-color:rgb(54, 54, 54);
+
+
+      height: 400px;
+      text-align: center;
+      color: white;
+ 
+      padding-top: 140px;
+
+      box-sizing: border-box;
+
+      h5, h1{
+
+        margin: 1px;
+
+
+      }
+
+
+
+
+
+    }
+
+    .hierba{
+
+      width: 100%;
+      height: 400px;
+      background-image: url(../fotos/pic01.jpg);
+
+
+    }
+
+
+    .cuerpo{
+
+      display: flex;
+      justify-content: center;
+      width: 800px;
+      margin: auto;
+
+      .col1{
+
+        flex: 1;
+
+        h3{
+
+          color: rgb(0, 134, 80);
+
+        }
+
+        h5{
+
+          font-weight:100;
+          color: gray;
+
+        }
+
+
+        p{
+
+        text-align: justify;
+
+        }
+
+
+      }
+
+
+      .col2{
+        flex:1;
+
+
+        ul{
+          height: 90%;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+        
+          li{
+
+            flex: 1;
+
+
+
+            a{
+              text-decoration: none;
+              margin-top: 15px;
+              color: black;
+            }
+
+          }
+
+        }
+      }
+
+    }
+
+    .foot{
+      background-color: black;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      list-style: none;
+      margin-bottom: 0;
+
+      .col01, .col02{
+        flex: 1;
+        ul{
+        padding: 0;
+        list-style: none;
+
+          a{
+              margin-top: 15px;
+              color: gray;
+            }
+
+
+        }
+
+      }
+      .col03{
+      flex: 1;
+        p{
+        width: 300px;
+        }
+        
+        .enlaces{
+
+          display: grid; 
+          width: 300px;
+
+          grid-template-columns: repeat(4,1fr);
+          row-gap: 5px;
+
+        }
+
+
+      }
+
+
+
+
+    }
+
+    .copy{
+
+      background-color:rgba(85, 154, 131);
+      margin: 0;
+      text-align: center;
+      padding: 60px 0 60px 0;
+      color: white;
+
+
+
+    }
+
+
+
+
+  </style>
+
+</head>
+<body>
+
+  <div class="header">
+    <ul>
+      <li><a href="#">HomePage</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="title">
+
+    <h1>GRASSYGREEN</h1>
+    <h5>design by Eric Herrera</h5>
+  </div>
+
+
+  <div class="hierba"></div>
+
+  <div class="cuerpo">
+
+    <div class="col1">
+
+      <h3>Integer sit amet aliquet</h3>
+      <h5>Phasellus nec erat sit amet nibh pellentesque congue</h5>
+
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, ccusamus
+      consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis, at a, dicta fugiat
+      cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, accusamus
+      consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis, at a, dicta fugiat
+      cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, accusamus
+      consectetur?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, ccusamus
+      consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis, at a, dicta fugiat
+      cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, accusamus
+      consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis, at a, dicta fugiat
+      cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur, accusamus
+      consectetur?</p>
+
+
+
+
+    </div>
+
+    <div class="col2">
+      <h3>Integer sit amet aliquet</h3>
+      <ul>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+      </ul>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="foot">
+
+    <div class="col01">
+      <h4>LATEST POSTS</h4>
+
+      <ul>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+      </ul>
+
+
+    </div>
+    <div class="col02">
+      <h4>POPULAR LINKS</h4>
+      <ul>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+        <li><a href="#">accusamus consectetur? Quibusdam</a></li>
+      </ul>
+    </div>
+    <div class="col03">
+      <h4>FOLLOW US</h4>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima perferendis ducimus ut perspiciatis,
+      consectetur voluptatum neque eius ratione iste, fugiat error laboriosam porro, unde, ex necessitatibus obcaecati quam
+      velit.</p>
+
+      <div class="enlaces"><a href="#"><img src="../fotos/fbck.png" alt=""></a><a href="#"><img src="../fotos/gplus.png" alt=""></a><a href="#"><img src="../fotos/pinterest.png" alt=""></a><a href="#"><img src="../fotos/twiiterblue.png" alt=""></a><a href="#"><img src="../fotos/youtube.jpg" alt=""></a><a href="#"><img src="../fotos/rss-80x80.png" alt=""></a><a href="#"><img src="../fotos/tumbler.png" alt=""></a></div>
+
+    </div>
+    
+  </div>
+
+  <div class="copy">
+
+    <p>© Untitled. All rights reserved. | Photos by Me | Design by Eric Herrera</p>
+
+
+  </div>  
+
+
+
+
+
+
+
+  
+</body>
+</html>

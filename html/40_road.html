@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+
+    body{
+      margin: 0;
+    }
+
+    p{
+
+        color: gray;
+        font-weight: 100;
+
+    }
+
+
+
+    .lista{
+
+      list-style: none;
+      padding: 0;
+      a{
+        text-decoration: none;
+      }
+
+    }
+
+
+    .header{
+
+      width: 100%;
+      position: fixed;
+      background-color: rgba(31, 49, 32, 0.2);
+    
+      .lista{
+
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        color: white;
+
+        a{
+          padding:20px;
+          display: block;
+          color: white;
+          
+        }
+
+        li:not(:last-of-type) a{
+          border-right: 1px white solid;
+        }
+
+      }
+
+
+
+    }
+
+  .road{
+    width: 100%;
+    height: 100vb;
+
+    background: url(../fotos/autopista/header.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+
+  }
+
+  .body{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    justify-content: center;
+
+    .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+
+    .subtitle{
+      border-bottom: 3px gray solid;
+      padding: 20px 0;
+    }
+
+  }
+
+
+  .row1{
+      
+    display: flex;
+    gap: 15px;
+
+    padding-bottom: 20px;
+
+    h3{
+      text-align: center;
+    }
+    a{
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: gray;
+      background-color: rgb(92, 195, 92);
+      padding: 3px;
+    }
+  }
+
+
+
+  .contenido{
+
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+
+    .unidad{
+
+      padding: 0;
+
+      img{
+
+        width: 100%;
+      }
+
+      h3{
+        text-align: center;
+      }
+    }
+
+
+
+
+  }
+
+  .finroad{
+
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    background: url(../fotos/autopista/header.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+
+
+    p{
+      display: block;
+      max-width: 75%;
+    }
+
+  }
+
+  .footer{
+
+    background-color: black;
+    color: gray;
+    text-align: center;
+    margin: 0;
+
+    overflow: hidden;
+
+
+
+  }
+
+  </style>
+
+
+
+</head>
+<body>
+
+  <div class="header">
+
+    <lu class="lista">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><a href="#">PAG 1</a></li>
+      <li><a href="#">PAG 2</a></li>
+    </lu>
+  </div>
+
+  <div class="road"></div>
+
+  <div class="body">
+    <div class="title">
+      
+      <h1>Maquetación de una web ocn HTML y CSS</h1>
+      <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro nihil odio quasi illo eveniet quisquam quod, ad ut,
+      consequatur iusto eius explicabo totam commodi distinctio quis aspernatur amet suscipit repellendus?</p>
+    </div>
+
+    <div class="row1">
+      <div class="col">
+        <div>
+        <h3>bla bla bla</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum excepturi eius voluptate laborum facilis accusamus inventore assumenda fugit perferendis quod! Commodi odit incidunt voluptas quod sunt in quos vitae quas.
+        </p>
+      </div>
+        <a href="#">Read More</a>
+      </div>
+      <div class="col">
+        <div>
+        <h3>bla bla bla</h3>
+        <p>
+          Reprehenderit, consectetur nobis omnis placeat atque sint consequuntur fugiat mollitia quia blanditiis dignissimos magnam, itaque facere quam cupiditate officia maxime pariatur ipsa quasi, temporibus quae veniam? Illo adipisci deserunt praesentium.
+        </p>
+      </div>
+        <a href="#">Read More</a>
+      </div>
+      <div class="col">
+        <div>
+        <h3>bla bla bla</h3>
+        <p>
+          Quae voluptas minima temporibus unde ducimus! In iure quaerat asperiores quis assumenda modi unde repellat. Vero rerum itaque perferendis nam iste dolore iusto. Nulla eum necessitatibus laboriosam non asperiores molestiae!
+        </p>
+      </div>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <div class="contenido">
+
+      <div class="unidad">
+        <img src="../fotos/autopista/pic01.jpg" alt="">
+        <h3>bla bla bla</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quas officiis quisquam quidem expedita facilis. Dicta vero doloribus voluptatum quaerat.</p>
+      </div>
+      <div class="unidad">
+        <img src="../fotos/autopista/pic02.jpg" alt="">
+        <h3>bla bla bla</h3>
+        <p>Mollitia non veniam sequi, modi ea quasi incidunt aut distinctio labore, soluta quo atque quidem officiis consequuntur accusantium, voluptas iusto?</p>
+      </div>
+      <div class="unidad">
+        <img src="../fotos/autopista/pic03.jpg" alt="">
+        <h3>bla bla bla</h3>
+        <p>Ipsa dolorum iusto maiores autem quis quas alias enim perspiciatis? Tenetur veniam quaerat dolorem facilis inventore velit illo assumenda non.</p>
+      </div>
+      <div class="unidad">
+        <img src="../fotos/autopista/pic04.jpg" alt="">
+        <h3>bla bla bla</h3>
+        <p>Eveniet, impedit. Veniam, aliquid quia eum alias magni quas consequuntur temporibus accusamus ratione dolorem, nesciunt doloremque accusantium eligendi quae neque.</p>
+      </div>
+
+
+
+    </div>
+
+    
+
+    
+  </div>
+
+  <div class="finroad"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolor labore sequi quasi commodi enim officiis, expedita explicabo eligendi odio pariatur cum quam praesentium consequatur, repudiandae rerum velit maiores eaque!</p></div>
+
+
+  <div class="footer">
+
+    <h4>Bla bla bla</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem modi sed ex ab.</p>
+    <h5>bla bla</h5>
+
+
+  </div>
+
+
+  
+</body>
+</html>

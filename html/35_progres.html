@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+
+    @keyframes gain_exp {
+      
+      from{max-width:0%;}
+
+      to{max-width: 75%;}
+
+
+    }
+
+
+    @keyframes rotating {
+      
+      from{transform:rotate(0deg);}
+      to{transform: rotate(360deg);}
+
+
+      }
+
+
+    
+
+
+
+    .bar{
+
+      width: 1000px;
+      height: 60px;
+      border: 3px black solid ;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+
+    }
+
+    .progres{
+
+      max-width: 0;
+      height: 100%;
+      background-color: red;
+      box-sizing: border-box;
+      background-image: url(https://pablomonteserin.com/res/html5/ex/animations/keyframes/barrita-corazones/corazon-mask.png);
+      background-size: auto 100%;
+    }
+
+
+    .bar:hover{
+
+      .progres{
+
+       animation: gain_exp 2s;
+        animation-fill-mode: forwards;
+
+      }
+
+
+
+
+
+
+    }
+
+
+
+  .mareo{
+
+  animation: rotating 4s linear;
+  animation-iteration-count: infinite ;
+
+
+  }
+
+
+  </style>
+
+
+</head>
+<body>
+  
+  <div class="bar">
+    <div class="progres"></div>
+  </div>
+
+
+  <div style="height: 100px;"></div>
+
+  <img class="mareo" src="https://pablomonteserin.com/wp-content/uploads/2025/03/espiral-1024x1024.jpg" alt="espiral">
+
+</body>
+</html>

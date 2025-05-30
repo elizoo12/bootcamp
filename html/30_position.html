@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    h4{
+
+      background-color: antiquewhite;
+      border: 2px lightsalmon solid;
+      margin: 5px 2px 10px 2px;
+      text-align: center;
+      padding: 10px;
+  
+
+    }
+
+
+  .container{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    border: 2px black solid;
+  }
+
+
+  .box{
+    width: 350px;
+    height: 200px;
+    position: relative;
+  }
+
+  .box:hover{
+
+    z-index: 1000;
+    background-color: black;
+    transition: 1s;
+  }
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+  <h1 style="text-align: center;">Leyes de murphy</h1>
+
+  <h4> cualquier cosa que pueda ir mal, ... ira mal.</h4>
+
+
+
+  <div class="box" style="background-color:green ;"></div>
+  <div class="box" style="background-color:blue ;left: 350px;"></div>
+  <div class="box" style="background-color:yellow ; left: 350px; top: -400px"></div>
+  <div class="box" style="background-color: purple ; top: -400px;"></div>
+  <div class="box center" style="background-color: red ; top: -700px; left: 175px;"></div>
+
+
+
+  <div class="container">
+    <div class="box" style="background-color:green ;"></div>
+    <div class="box" style="background-color:blue ;left: 350px;"></div>
+    <div class="box" style="background-color:yellow ; left: 350px; top: -400px"></div>
+    <div class="box" style="background-color: purple ; top: -400px;"></div>
+    <div class="box center" style="background-color: red ; top: -700px; left: 25%;"></div>
+  </div>
+
+
+
+
+
+  
+</body>
+</html>

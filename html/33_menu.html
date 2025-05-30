@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+  @font-face{
+    font-family: flechita;
+    src:url(../Arrows_tfb.ttf); 
+  }
+
+
+    ul{
+      margin-top: 50px;
+      display: flex;
+      justify-content:left;
+      gap: 5px;
+    }
+
+
+    li{
+
+      list-style: none;
+    
+    }
+
+
+    a{
+      display: block;
+
+      width: 200px;
+      padding: 10px;
+
+      text-decoration: none;
+      color: black;
+      background-color: pink;
+      border: 3px solid black;
+      border-radius: 7px;
+    }
+
+
+    a:hover{
+
+      background-color: salmon;
+      transition: 0.4s;
+
+
+    }
+
+    li.hasChildren > a:after{
+
+      color: blueviolet;
+      font-family: flechita;
+      content: " l";
+    }
+
+    li.hasChildren ul{
+
+      position: absolute;
+      flex-direction: column;
+      margin: 0 0 0 0 ;
+      padding: 5px 0 0 0;
+     
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+
+      transition: opacity 1s, max-height 0.5s;
+    }
+
+    li.hasChildren:hover ul{
+
+     
+      opacity: 1;
+      max-height: 1000px;
+
+
+    }
+  li.hasChildren ul:hover{
+
+    max-height: 1000px;
+
+
+  }
+
+
+
+    li.hasChildren li{
+      display: block;
+    }
+
+
+  </style>
+
+
+
+</head>
+<body>
+  
+  <ul>
+
+    <li><a href="#">Home</a></li>
+    <li class="hasChildren">
+      <a  href="#">Fotos</a>
+      <ul>
+        <li><a href="#">Pejelagartos</a></li>
+        <li><a href="#">Gatos</a></li>
+        <li class="hasChildren">
+          <a href="#">Perros</a>
+          <ul>
+            <li><a href="#">Husky</a></li>
+            <li><a href="#">Rotweiler</a></li>
+            <li><a href="#">Chihuahua</a></li>
+            <li><a href="#">San bernardo</a></li>
+            
+          </ul> 
+        </li>
+      </ul>
+    
+    </li>
+    <li><a href="#">Videos</a></li>
+    <li><a href="#">Contact</a></li>
+
+  </ul>
+
+
+
+</body>
+</html>
