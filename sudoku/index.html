@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../fotos/kh_icon.png">
+  <title>Resolver Sudokus</title>
+
+
+  <style>
+
+    .darkMode{
+
+      display: block;
+      border: 1px rgb(84, 15, 15) solid;
+      width:fit-content;
+      background-color: #638199;
+      padding: 5px;
+      width: 60px;
+
+    }
+
+
+  body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark {
+  background-color: #121212;
+  color: white;
+  }
+
+
+
+    .sudo{
+
+      margin: auto;
+      display: grid;
+      width: 90%;
+      max-width: 600px;
+      aspect-ratio: 1 / 1;
+      border: 10px black solid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+
+      .cuadrado{
+        box-sizing: border-box;
+        display: grid;
+        border: 3px red solid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        box-sizing: border-box;
+        .casilla{
+        display: block;
+        text-align: center;
+        border: 1px solid black;
+        font-size: 4rem;
+      }
+
+      .casilla:focus{
+
+        outline: none;
+        background-color: #cbd7e1;
+        border-color: rgb(64, 64, 245);
+
+      }
+
+      }
+
+    }
+
+    .sudo.dark{
+
+      border: 10px rgb(123, 123, 123) solid;
+      .cuadrado{
+        border: 3px rgb(87, 35, 35) solid;
+
+        .casilla{
+
+          border: 1px solid rgb(123, 123, 123);
+        }
+        .casilla:focus{
+          outline: none;
+        /*   background-color: #fd582f;
+          border-color: #ba4122; */
+          background-color:rgba(253, 88, 47, 0.5) ;
+          border-color: rgba(186,65, 34, 0.6);
+
+        }
+
+      }
+
+
+
+    }
+
+
+
+    .boton{
+
+      display: block;
+      
+      margin: auto;
+      width: 300px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border: 3px green solid;
+      background-color: greenyellow;
+    
+      text-align: center;
+      padding: 20px;
+      font-weight: 800;
+      font-size: 2.5rem;
+      box-shadow: 4px 4px rgba(40, 39, 39, 0.8);
+    }
+
+
+    .boton.dark{
+
+    border: 3px rgb(74, 139, 74) solid;
+    background-color: rgb(56, 91, 2);
+    box-shadow: 4px 4px rgb(88, 165, 88);
+    }
+
+
+  </style>
+
+
+
+
+</head>
+<body>
+  <div class="darkMode">Modo oscuro</div>
+  <div class="sudo solve">
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+      <div class="casilla" contenteditable="true"></div>
+    </div>
+  </div>
+
+  <div class="boton">resolver</div>
+
+
+  <div class="sudo solution">
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+    <div class="cuadrado">
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+      <div class="casilla"></div>
+    </div>
+  </div>
+
+  
+</body>
+
+<script src="./solver.js"></script>
+
+
+</html>
