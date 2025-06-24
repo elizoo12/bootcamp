@@ -159,8 +159,7 @@ document.querySelectorAll('.solve .cuadrado').forEach((cuadrado, qIndex) => {
     casilla.dataset.row = row;
     casilla.dataset.col = col;
 
-    // Solo para ver el resultado en el tablero:
-    // casilla.innerText = `(${fila},${col})`;
+
   });
 });
 document.querySelectorAll('.solution .cuadrado').forEach((cuadrado, qIndex) => {
@@ -173,8 +172,6 @@ document.querySelectorAll('.solution .cuadrado').forEach((cuadrado, qIndex) => {
     casilla.dataset.row = row;
     casilla.dataset.col = col;
 
-    // Solo para ver el resultado en el tablero:
-    // casilla.innerText = `(${fila},${col})`;
   });
 });
 
@@ -287,5 +284,4 @@ document.querySelector('.boton').addEventListener('click', () => {
 
   }
 });
-
 

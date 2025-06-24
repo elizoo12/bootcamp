@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+
+
+<script>
+
+const n1=Number(prompt("Dame un numero: "));
+const n2=Number(prompt("Dame otro numero: "));
+const op=prompt("Una operacion: ");
+
+switch(op){
+
+  case '+':
+    alert(`la operacion da ${n1+n2}`);
+    break;  
+  case '-':
+    alert(`la operacion da ${n1 - n2}`);
+    break;
+  case '*':
+    alert(`la operacion da ${n1 * n2}`);
+    break;
+  case '/':
+    alert(`la operacion da ${n1 / n2}`);
+    break;
+  default:
+    alert(`${op} no es una operacion`);
+
+}
+
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #lightboxContainer {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#lightbox {
+  margin: 100px auto 0 auto;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  overflow: auto;
+  position: relative;
+  z-index: 9999;
+}
+  </style>
+
+
+
+</head>
+<body>
+  
+  <a href="#" id="abrir">pulsar</a>
+
+  <div id="lightboxContainer">
+    <div id="overlay"></div>
+    
+    <div id="lightbox">This is the lightbox content.
+      <a href="#" id="ocultar">Close</a>
+    </div>
+
+  </div>
+</body>
+
+  <script>
+
+    const lightBox= document.querySelector('#lightboxContainer');
+    const abrir=document.querySelector("#abrir");
+/* 
+    lightBox.style.display = 'block';
+    abrir.style.display='none';
+ */
+    abrir.addEventListener('click',()=>{
+
+      lightBox.style.display = 'block';
+      abrir.style.display ='none';
+
+
+    })
+
+
+
+    document.querySelector("#ocultar").addEventListener('click',()=>{
+      lightBox.style.display = 'none';
+      abrir.style.display = 'block';
+    })
+
+
+  </script>
+
+</html>

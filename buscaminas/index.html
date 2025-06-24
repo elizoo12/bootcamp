@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+  .juego{
+
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: gray;
+    margin: auto;
+    overflow: hidden;
+    
+    border: 5px solid rgb(77, 76, 76);
+    .navbar{
+      background-color: darkgray;
+      border-bottom: 3px solid rgb(77, 76, 76);
+      padding: 15px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20%;
+      .reset{
+        width: 60px;
+        height: 60px;
+        background-image: url(./fotos/cara.png);
+        background-size: 100% 100%;
+
+
+      }
+      .barras{
+        width: 140px;
+        box-sizing: border-box;
+        #resizeBoard{
+          display: block;
+          width: 50%;
+          margin: auto;
+        }
+      }
+    }
+
+    .board {
+      margin: auto;
+      border: 3px solid black;
+
+    }
+
+  .casilla{
+    border: 1px solid #aaa;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  }
+
+
+
+
+
+</style>
+
+
+
+<body>
+  
+
+  <div class="juego">
+    <div class="navbar">
+
+      <div class="reset"></div>
+      <div class="barras">
+      <label for="rows" >Filas: <span id="showRows">9</span>  </label>
+        <input type="range" min="5" max="30" value="9" id="inputRows">
+
+      <label for="columns">Columnas: <span id="showCols">9</span> </label>
+        <input type="range" min="5" max="30" value="9" id="inputCols">
+        <label for="generate Board"></label>
+        <button id="resizeBoard">resize</button>
+      </div>
+    </div>
+
+
+    <div class="board"></div>
+  </div>  
+
+
+
+  
+</body>
+
+<script src="./main.js"></script>
+
+
+</html>

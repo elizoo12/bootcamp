@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+  function costeAvion(destino, numNoches) {
+
+    let coste = 1;
+
+    switch (destino) {
+
+      case "Oviedo":
+        coste *= 15;
+        break;
+      case "Tokyo":
+        coste *= 700;
+        break;
+      case "Madrid":
+      case "Barcelona":
+        coste *= 90;
+        break;
+    }
+
+    if (numNoches > 3) {
+      coste *= 0.9;
+    }
+    return coste;
+  }
+
+  function costeAlquilerCoche(numNoches) {
+    coste = 1;
+
+    coste *= numNoches * 40;
+
+    if (numNoches > 6) {
+      coste -= 50;
+    } else if (numNoches > 2) {
+      coste -= 20;
+    }
+    return coste;
+  }
+
+
+
+
+  const numNoches = prompt('numero de noches');
+  const destino = prompt('destino');
+  const resultado1 = costeHotel(numNoches);
+  const resultado2 = costeAvion(destino, numNoches);
+  const resultado3 = costeAlquilerCoche(numNoches);
+  console.log("Coste hotel: " + resultado1);
+  console.log("Coste viaje: ", resultado2);
+  console.log("Coste alquiler coche: ", resultado3);
+  console.log("Total:", resultado1 + resultado2 + resultado3);  
+
+  function costeHotel(nNoches){
+
+    return 140*parseInt(nNoches);
+  }
+
+
+
+
+
+</script>
+</html>

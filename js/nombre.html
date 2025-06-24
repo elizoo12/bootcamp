@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+  <script>
+
+  function hasNums(str) {
+    return /[0-9]/.test(str);
+  }
+
+  let real=false;
+  let name;
+  while(!real){
+
+    name=prompt("dame tu user");
+    if(!hasNums(name)) real=confirm("es tu nombre real?")
+  }
+
+
+
+
+  </script>
+
+
+
+
+
+</html>

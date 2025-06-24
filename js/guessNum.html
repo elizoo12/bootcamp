@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+
+  <script>
+    const n=Math.floor(Math.random()*101);
+
+    let guess=prompt("adivina el numero secreto del 0 al 100");
+
+    while(guess!=n){
+
+      if(guess>n) guess=prompt("el numero es mas pequeño, intentalo de nuevo");
+      else guess=prompt("el numero es mas grande, intentalo de nuevo");
+
+    }
+    alert(`lo adivinaste, el numero era ${n}`);
+
+  </script>
+
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+  const getDNI=(number)=>{
+
+    if(isNaN(number))return null;
+    if(number.length!=8) return null;
+    
+    const n=number%23;
+    const str="TRWAGMYFPDXBNJZSQVHLCKE";
+    return str[n];
+  }
+  console.log(getDNI("54029327"));
+
+</script>
+
+
+</html>
