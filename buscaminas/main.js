@@ -135,7 +135,10 @@ function revealCasilla(coorX,coorY,privateBoard,publicBoard){
 
   if(privateBoard[coorX][coorY]==-1){
     //el jugador pierde PENDIENTE
-    console.log("el fin de partida no está implementado");
+
+    alert("Has perdido");
+    //showSecretMap();
+
   }else if(privateBoard[coorX][coorY]==0){
     publicBoard[coorX][coorY]=0;
     console.log("entra al cero");
@@ -149,6 +152,7 @@ function revealCasilla(coorX,coorY,privateBoard,publicBoard){
 
   }else{
     publicBoard[coorX][coorY]=privateBoard[coorX][coorY];
+    document.querySelector(".")
   }
 
 }
@@ -208,7 +212,6 @@ document.querySelector('#inputCols').addEventListener('input',(e)=>{
 function makeBoxesListen(){
 document.querySelectorAll('.casilla').forEach((casilla)=>{
   casilla.addEventListener('click',(e)=>{
-    console.log("escuchaaaaa");
     console.log(casilla.dataset.row,"   ",casilla.dataset.col);
     if(!started){
       started=true;

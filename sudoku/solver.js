@@ -1,5 +1,3 @@
-console.log("wenas")
-
 const ejemplo=[
   [1,2,3,4,5,6,7,8,9],
   [2,3,4,5,6,7,8,9,1],
@@ -63,7 +61,6 @@ function print_sudo(sudo){
 function fillOut(i,j,sudo,b,inCol,inRow,inSquare){
 
   if(i===8 && j>8){
-    console.log("resultado");
     print_sudo(sudo);
     return true;
   }else{

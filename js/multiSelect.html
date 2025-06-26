@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p>Cuales son lenguajes interpretados? <span>Python</span> <span>Java</span> <span>JavaScript</span> <span>Visual Basic</span></p>
+
+  <button>solucionar</button>
+
+</body>
+
+  <script>
+    const spans=document.querySelectorAll("span")
+
+    document.querySelector("button").addEventListener('click',()=>{
+
+      spans.forEach((element)=>{
+
+        console.log(element);
+
+        switch(element.innerText.trim()){
+          case("Python"):
+          case("JavaScript"):
+          case("Visual Basic"):
+            element.style.background='red';
+            break;
+
+          default:
+            break;
+
+        }
+
+
+      })
+    })
+
+  </script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="number"><input type="number"><input type="number"><input type="number"><input type="number">
+  <button>sumar</button>
+  <p>result: <span></span></p>
+</body>
+
+  <script>
+
+    const numbers=document.querySelectorAll("input");
+
+    document.querySelector("button").addEventListener("click",()=>{
+
+      let suma=0;
+
+      numbers.forEach((n)=>{
+        suma+=parseInt(n.value);
+      })
+      document.querySelector("span").innerText=suma;
+    })
+
+  </script>
+
+
+
+</html>

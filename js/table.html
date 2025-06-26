@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=!, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <table border="1">
+
+    <tr>
+      <td><input type="radio"></td>
+      <td>txt2</td>
+      <td>txt3</td>
+    </tr>
+    <tr>
+      <td><input type="radio"></td>
+      <td>txt2</td>
+      <td>txt3</td>
+    </tr>
+    <tr>
+      <td><input type="radio"></td>
+      <td>txt2</td>
+      <td>txt3</td>
+    </tr>
+
+
+  </table>
+</body>
+
+<script>
+
+  const filas=document.querySelectorAll('tr')
+  filas.forEach((f)=>{f.addEventListener('click',(e)=>{
+console.log(f)
+    const c=f.querySelector("input");
+
+    if(f.classList.contains("activo")){
+      f.style.backgroundColor = "white";
+      c.checked=false;
+    }else{
+
+      f.style.backgroundColor="green";
+      c.checked=true;
+
+    }
+    f.classList.toggle("activo");
+  })})
+
+
+</script>
+
+
+</html>

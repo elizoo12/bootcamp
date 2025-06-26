@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<h1>Cuestionario</h1>
+
+  <ul>
+
+    <li>
+      <p>Quien es mas rico?</p>
+      <p><input type="radio" name="rico" class="correct" value="batman">Batman</p>
+      <p><input type="radio" name="rico">Spiderman</p>
+    </li>
+
+    <li>
+      <p>Quien es mas fuerte?</p>
+      <p><input type="radio" name="fuerte" class="correct">Superman</p>
+      <p><input type="radio" name="fuerte">Batman</p>
+
+    </li>
+    <li>
+      <p>Mejor videojuego?</p>
+      <p><input type="radio" name="videojuego" class="correct">Kingdon Hearts</p>
+      <p><input type="radio" name="videojuego">WOW</p>
+
+    </li>
+    <li>
+      <p>alterego de batman:</p>
+      <p><input type="radio" name="alterego">Peter Parker</p>
+      <p><input type="radio" name="alterego" class="correct">Bruce Wayne</p>
+    </li>
+
+    <button>solve</button>
+
+
+  </ul>
+</body>
+
+  <script>
+
+    const inputs=document.querySelectorAll("input");
+
+    document.querySelector("button").addEventListener("click",()=>{
+
+      inputs.forEach((input)=>{
+        
+        if(input.checked){
+
+          if(input.classList.contains("correct")){
+            input.closest("p").style.background="green";
+          }else{
+            input.closest("p").style.background = "red";
+          }
+        }else{
+          input.closest("p").style.background = "transparent";
+
+        }
+
+      })
+    })
+
+  </script>
+
+
+
+</html>

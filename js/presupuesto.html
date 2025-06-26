@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto</title>
+</head>
+<body>
+  
+  <ul>
+
+    <li>
+      <p>elige encimera</p>
+      <p><input type="radio" name="encimera" value="100">barata</p>
+      <p><input type="radio" name="encimera" value="300">cara</p>
+    </li>
+
+    <li>
+      <p>elige baño</p>
+      <p><input type="radio" name="baño" value="100">barato</p>
+      <p><input type="radio" name="baño" value="300">caro</p>
+    </li>
+
+    <li>
+      <p>elige habitacion</p>
+      <p><input type="radio" name="habitacion" value="100">barata</p>
+      <p><input type="radio" name="habitacion" value="300">cara</p>
+    </li>
+  </ul>
+
+  <p>el presupuesto es de: <span class="presupuesto">0</span></p>
+
+
+</body>
+
+<script>
+
+  document.querySelectorAll("input").forEach((i)=>{
+    i.addEventListener('click',()=>{
+      const checked=document.querySelectorAll('input[type=radio]:checked');
+      let presupuesto=0;
+
+      checked.forEach((c)=>{
+        presupuesto+=parseInt(c.value);
+      })
+      document.querySelector("span").innerText=presupuesto;
+
+    })
+  })
+
+
+
+
+
+
+</script>
+</html>
